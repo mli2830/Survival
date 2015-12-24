@@ -2,8 +2,8 @@
 
 current: target
 
-target:	  base.survival.Rout
-	  less base.survival.Rout
+target:	  first.simulate.Rout
+	  less first.simulate.Rout
 
 glm:	  base.glm.Rout
 	  less base.glm.Rout
@@ -51,4 +51,14 @@ covariates.Rout: times.RData covariates.R
 		 $(run-R)
 
 %.bimonthly.Rout:	%.outcomes.Rout bimonthly.R
+			$(run-R)
+
+######################################################
+
+##Survival/test
+
+%.testcov.Rout:	times.RData %.R testcov.R
+		$(run-R)
+
+%.simulate.Rout:	%.testcov.Rout simulate.R
 			$(run-R)
