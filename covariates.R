@@ -10,6 +10,8 @@ obs <- (obs %>%
                        , VL = pmax(VL, threshVL)
                        , logVL = log(VL)
                        , cumVL = cumsum(logVL)
+                       , dur = end.yrs - start.yrs
+                       , ldur = log(dur)
                        )
     )
 
