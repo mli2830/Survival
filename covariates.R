@@ -1,7 +1,5 @@
 library(dplyr)
 
-load("times.RData")
-
 threshVL <- 400
 set.seed(2017)
 obs <- (obs %>% group_by(id)
