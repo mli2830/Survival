@@ -4,6 +4,10 @@ current: target
 
 target:	  base.survival.Rout
 	  less base.survival.Rout
+
+glm:	  base.glm.Rout
+	  less base.glm.Rout
+
 ############################################
 
 
