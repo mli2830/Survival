@@ -2,8 +2,8 @@
 
 current: target
 
-target:	  base.outcomes.Rout
-	  less base.outcomes.Rout
+target:	  base.survival.Rout
+	  less base.survival.Rout
 ############################################
 
 
@@ -28,3 +28,7 @@ covariates.Rout: times.RData covariates.R
 
 %.outcomes.Rout: covariates.Rout %.Rout outcomes.R
 		 $(run-R)
+
+%.survival.Rout: %.outcomes.Rout survival.R
+		 $(run-R)
+
