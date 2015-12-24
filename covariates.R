@@ -1,8 +1,9 @@
 library(dplyr)
 
+load("times.RData")
+
 threshVL <- 400
 set.seed(2017)
-print(obs)
 obs <- (obs %>% group_by(id)
           %>% mutate(setPoint = rlnorm(1, meanlog=7, sdlog=1)
               , VL = rlnorm(n(), meanlog=log(setPoint), sdlog=1)
