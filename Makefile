@@ -2,8 +2,8 @@
 
 current: target
 
-target:	  base.survival.Rout
-	  less base.survival.Rout
+target:	  base.bimonthly.Rout
+	  less base.bimonthly.Rout
 ############################################
 
 
@@ -32,3 +32,19 @@ covariates.Rout: times.RData covariates.R
 %.survival.Rout: %.outcomes.Rout survival.R
 		 $(run-R)
 
+%.glm.Rout:	 %.outcomes.Rout glm.R
+		 $(run-R)
+
+%.quarters.Rout: %.outcomes.Rout quarters.R
+		 $(run-R)
+
+#####testing different divisions
+
+%.months.Rout:	 %.outcomes.Rout months.R
+		 $(run-R)
+
+%.semi.Rout:	 %.outcomes.Rout semi.R
+		 $(run-R)
+
+%.bimonthly.Rout:	%.outcomes.Rout bimonthly.R
+			$(run-R)
