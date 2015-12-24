@@ -2,8 +2,8 @@
 
 current: target
 
-target:	  base.bimonthly.Rout
-	  less base.bimonthly.Rout
+target:	  base.survival.Rout
+	  less base.survival.Rout
 ############################################
 
 
