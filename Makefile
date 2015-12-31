@@ -10,11 +10,8 @@ glm:	  base.glm.Rout
 
 ############################################
 
-
 gitroot = ../
--include local.mk
--include $(gitroot)/local.mk
-ms = $(gitroot)/makestuff
+-include stuff.mk
 
 -include $(ms)/git.mk
 
