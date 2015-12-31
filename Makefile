@@ -27,6 +27,7 @@ covariates.Rout: times.RData covariates.R
 %.Rout:		 %.R
 		 $(run-R)
 
+.PRECIOUS: %.outcomes.Rout
 %.outcomes.Rout: covariates.Rout %.Rout outcomes.R
 		 $(run-R)
 
