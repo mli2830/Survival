@@ -2,8 +2,8 @@
 
 current: target
 
-target:	  first.simulate.Rout
-	  less first.simulate.Rout
+target:	  base.survival.Rout
+	  less base.survival.Rout
 
 glm:	  base.glm.Rout
 	  less base.glm.Rout
